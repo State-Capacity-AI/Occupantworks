@@ -8,24 +8,23 @@ const services = [
   {
     title: "Program & Delivery Management",
     description:
-      "For programs that are behind, at risk, or missing senior operational ownership. We stabilize, align, and move things forward.",
+      "Programs that are behind, at risk, or under-resourced. We provide senior operational ownership to stabilize, align, and drive progress.",
   },
   {
     title: "Service Design & Discovery",
     description:
-      "Assessment and research for agencies and primes that need to know what's broken before they build. Findings you can act on, not slide decks.",
+      "Workshops, journey mapping, and CX assessments for agencies and contractors who need to understand how people actually experience their services — before they redesign anything.",
   },
   {
     title: "Synthetic UX Research",
     description:
-      "Behavioral insight at the speed government actually needs. For agencies and nonprofits that can't staff a research practice but can't keep making decisions without one.",
+      "Behavioral insight at the speed of government. Part of Occupant's broader work on decision infrastructure and AI governance.",
   },
 ];
 
 export default function App() {
   const [contactOpen, setContactOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [expandedService, setExpandedService] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -107,8 +106,8 @@ export default function App() {
           }}
         >
           Bridging the gap between policy intent and digital reality. Senior
-          strategy and delivery leadership for government agencies and civic tech
-          primes.
+          strategy and delivery leadership for government agencies and the firms
+          that build for them.
         </p>
       </section>
 
@@ -193,11 +192,29 @@ export default function App() {
             lineHeight: 1.65,
           }}
         >
-          We work across program and delivery management, service design and
-          discovery, and a new category we're building — synthetic UX research
-          for organizations that need behavioral insight fast but can't staff a
-          research practice. The work is grounded in years of hands-on delivery
-          inside federal agencies and the firms that support them.
+          The work is grounded in years of hands-on delivery inside federal
+          agencies and the firms that support them.
+        </p>
+        <p
+          className="mt-6 md:mt-8 text-black/45 max-w-[58ch]"
+          style={{
+            fontSize: "clamp(1rem, 1.4vw, 1.125rem)",
+            fontWeight: 400,
+            lineHeight: 1.65,
+          }}
+        >
+          Occupant also advises institutional AI buyers on procurement,
+          governance, and vendor evaluation. That work lives at{" "}
+          <a
+            href="https://occupant.ee"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-200"
+            style={{ color: ACCENT }}
+          >
+            occupant.ee
+          </a>
+          .
         </p>
       </section>
 
@@ -243,31 +260,6 @@ export default function App() {
           />
         </button>
 
-        <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 mt-20 md:mt-28">
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors duration-200"
-            style={{
-              fontSize: "0.8125rem",
-              fontWeight: 400,
-              color: "rgba(242,240,237,0.35)",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = ACCENT)}
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "rgba(242,240,237,0.35)")
-            }
-          >
-            LinkedIn
-          </a>
-          <span
-            className="md:ml-auto"
-            style={{ fontSize: "0.8125rem", fontWeight: 400, color: "rgba(242,240,237,0.15)" }}
-          >
-            &copy; Occupant {new Date().getFullYear()}
-          </span>
-        </div>
       </section>
 
       {/* Contact Modal */}
