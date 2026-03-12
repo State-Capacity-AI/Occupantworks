@@ -13,7 +13,7 @@ const services = [
   {
     title: "Service Design & Discovery",
     description:
-      "Workshops, journey mapping, and CX assessments for agencies and contractors who need to understand how people actually experience their services — before they redesign anything.",
+      "Workshops, journey mapping, and CX assessments for agencies and contractors who need to understand how people actually experience their services before they redesign anything.",
   },
   {
     title: "Synthetic UX Research",
@@ -181,8 +181,10 @@ export default function App() {
             letterSpacing: "-0.02em",
           }}
         >
-          Occupant is a social purpose corporation that helps public-sector
-          agencies, nonprofits, and civic tech firms deliver better.
+          Occupant is a social purpose corporation built on direct experience
+          inside federal agencies, state systems, and city halls. We bring
+          senior practitioners who've operated at every level of government
+          and know how public systems actually work.
         </p>
         <p
           className="mt-8 md:mt-14 text-black/45 max-w-[58ch]"
@@ -192,11 +194,13 @@ export default function App() {
             lineHeight: 1.65,
           }}
         >
-          The work is grounded in years of hands-on delivery inside federal
-          agencies and the firms that support them.
+          We work at the seam between policy intent and digital reality
+          and we bring the team to match the mission.
         </p>
+
+        {/* AI advisory callout */}
         <p
-          className="mt-6 md:mt-8 text-black/45 max-w-[58ch]"
+          className="mt-14 md:mt-20 text-black/45 max-w-[58ch]"
           style={{
             fontSize: "clamp(1rem, 1.4vw, 1.125rem)",
             fontWeight: 400,
